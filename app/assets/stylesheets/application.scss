@@ -14,12 +14,12 @@
  *= require_self
  */
 
-$accent-color: #37bc0d;
+$accent-color: #28a443;
 $accent-color-dark: #3c8121;
-$accent-color-light: #76fa41;
+$accent-color-light: #2ac64d;
 $primary-font: 'Paytone One', sans-serif;
 $primary-color: #999;
-$primary-shadow-color: #444;
+$primary-shadow-color: #333;
 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
@@ -82,8 +82,8 @@ a:hover {
 	padding: 5px 10px 10px 10px;
 	margin: 20px;
 	font-family: $primary-font;
-	box-shadow: 0px 10px 8px $primary-shadow-color;
-	
+	box-shadow: 10px 10px 8px $primary-shadow-color;
+
 	h1 {
 		font-weight: 100;
 	}
