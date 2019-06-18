@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-toggleable-md sticky-top text-shadow-accent-color-dark">
+      <a class="navbar-brand" href="#">Flixter</a>  
+    </nav>
+
+    <div class="main">
+      <%= yield %>
+    </div>
+
+    <nav class="navbar navbar-toggleable-md fixed-bottom">
+    </nav>
+    
   </body>
 </html>
