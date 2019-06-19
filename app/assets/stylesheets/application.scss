@@ -24,6 +24,13 @@ $primary-shadow-color: #333;
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
 
+body {
+	background-image: image_url('brushed_alu_dark.png');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
@@ -34,15 +41,6 @@ a:hover {
 
 .text-shadow-accent-color-dark {
 	text-shadow: 4px 4px 5px $accent-color-dark;
-}
-
-.main {
-	background-image: image_url('brushed_alu_dark.png');
-	background-repeat: repeat;
-	background-attachment: fixed;
-	width: 100%;
-	height: 100vh;
-	padding: 0px;
 }
 
 .navbar {
@@ -73,6 +71,14 @@ a:hover {
   min-height: 200px;
   box-shadow: 0px 10px 8px $primary-shadow-color;
   position: sticky;
+
+  h1 {
+  	font-size: 35px;
+  }
+
+  h2 {
+  	font-size: 25px;
+  }
 }
 
 .frosty {
@@ -81,7 +87,6 @@ a:hover {
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
 	margin: 20px;
-	font-family: $primary-font;
 	box-shadow: 10px 10px 8px $primary-shadow-color;
 
 	h1 {
@@ -91,4 +96,10 @@ a:hover {
 	h2 {
 		font-weight: 200;
 	}
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
