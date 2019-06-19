@@ -20,6 +20,7 @@ $accent-color-light: #2ac64d;
 $primary-font: 'Paytone One', sans-serif;
 $primary-color: #999;
 $primary-shadow-color: #333;
+$dark-shadow-color: #111;
 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
@@ -86,8 +87,7 @@ a:hover {
 	color: $accent-color;
 	border-radius: 5px;
 	padding: 5px 10px 10px 10px;
-	margin: 20px;
-	box-shadow: 10px 10px 8px $primary-shadow-color;
+	box-shadow: 10px 10px 8px $dark-shadow-color;
 
 	h1 {
 		font-weight: 100;
@@ -96,10 +96,29 @@ a:hover {
 	h2 {
 		font-weight: 200;
 	}
+
+	ul {
+		list-style: none;
+	}
 }
 
 .feature {
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.collapse-overlay {
+	position: relative;
+	text-align: left !important;
+}
+
+.booyah-box {
+  box-shadow: 10px 10px 8px $primary-shadow-color;
+  background-image: image_url('crossword.png');
+  border: 2px solid $primary-color;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
 }

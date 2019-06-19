@@ -12,10 +12,47 @@
   <body>
 
     <nav class="navbar navbar-toggleable-md sticky-top text-shadow-accent-color-dark">
-      <a class="navbar-brand" href="#">Flixter</a>  
+
+      <%= link_to root_path do %>
+        <p class="navbar-brand">Flixter</p>
+      <% end %>
+        <ul class="nav nav-tabs">
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+            <div class="dropdown-menu">
+              <% if signed_in? %>
+                <%= link_to edit_user_registration_path(id: current_user.id), class: "dropdown-item" do %>
+                  My Profile
+                <% end %>
+                
+                <div class="dropdown-divider"></div>
+
+                <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+                  Sign Out
+                <% end %>
+              <% else %>
+                <%= link_to user_session_path, class: "dropdown-item" do %>
+                  Sign In
+                <% end %>
+
+                <%= link_to new_user_registration_path, class: "dropdown-item" do %>
+                  Create New Account
+                <% end %>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+
+    <div class="col-1">&nbsp;</div>
     </nav>
 
-    
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+        
     <%= yield %>
     
 
