@@ -49,6 +49,7 @@ a:hover {
   font-weight: 200;
   background-image: image_url('low_contrast_linen.png');
   color: $accent-color;
+  box-shadow: 0px 10px 8px $primary-shadow-color;
 }
 
 .navbar-brand {
