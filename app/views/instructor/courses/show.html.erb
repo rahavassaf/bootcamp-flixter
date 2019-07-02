@@ -1,6 +1,1 @@
-<br />
-<div class="booyah-box col-10 offset-1">
-  <h1 class="text-center"><%= @course.title %></h1>
-  <p><%= @course.description %></p>
-  <a>$<%= @course.cost %></a>
-</div>
+<%= render partial: 'courses/course', locals: {course: @course} %>
