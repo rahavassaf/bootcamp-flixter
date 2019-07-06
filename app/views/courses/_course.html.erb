@@ -16,13 +16,7 @@
 		</div>
 
 		<div class="row">
-			<%= link_to 'More', course_path(course.id), class: 'btn btn-primary btn-large' %>
-		
-			&nbsp;
-		
-			<% if current_user && current_user == course.user %>
-				<%= link_to 'Administer', instructor_course_path(course), class: 'btn btn-danger btn-large' %>
-			<% end %>
+			<%= link_to 'More', course_path(course.id), class: 'btn btn-primary' %>
 		</div>
 	</div>
 </div>

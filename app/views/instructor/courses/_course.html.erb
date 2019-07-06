@@ -1,0 +1,40 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+	<h1 class="text-center"><%= course.title %></h1>
+
+	<br>
+
+	<div class="col-sm-8 col-12">
+		<%= course.description %>
+	</div>
+
+	<div class="row">
+		<div class="col-4">
+			<span class="badge badge-default">
+				<%= number_to_currency course.cost %>
+			</span>
+		</div>
+
+		<div class="row">
+			<%= link_to 'More', course_path(course.id), class: 'btn btn-primary' %>
+		
+			&nbsp;
+		
+			<% if current_user && current_user == course.user %>
+				<%= link_to 'Administer', instructor_course_path(course), class: 'btn btn-danger' %>
+				&nbsp;
+				<%= link_to 'Add a new section...', new_instructor_course_section_path(course), class: 'btn btn-primary' %>
+				&nbsp;
+				<%= link_to 'Preview As Student...', course_path(course), class: 'btn btn-warning float-right' %>
+			<% end %>
+		</div>
+	</div>
+
+	<hr>
+
+	<ul>
+		<% @course.sections.each do |s| %>
+			<%= render partial: 'instructor/sections/section', locals: {section: s} %>
+		<% end %>
+	</ul>
+</div>
