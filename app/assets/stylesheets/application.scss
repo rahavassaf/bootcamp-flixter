@@ -22,8 +22,15 @@ $primary-color: #999;
 $primary-shadow-color: #111;
 $dark-shadow-color: #111;
 
+$theme-colors: (
+  "primary": #28a443,
+  "danger": #ff4136
+);
+
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+
+
 
 body {
 	background-image: image_url('brushed_alu_dark.png');
@@ -34,10 +41,6 @@ body {
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
-}
-
-a:hover {
-	color: $accent-color-light;
 }
 
 .text-shadow-accent-color-dark {
