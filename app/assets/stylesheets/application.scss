@@ -139,3 +139,20 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .clr {
   clear: both;
 }
+
+.section {
+	background-color: rgba(0, 0, 0, 0.35);
+	box-shadow: 2px 2px 4px $primary-shadow-color;
+	padding: 10px;
+	border: solid 2px #888;
+	border-radius: 5px;
+	margin: 20px
+}
+
+.lesson {
+	background-color: rgba(230, 230, 230, 0.35);
+	padding: 10px;
+	border: solid 2px #888;
+	border-radius: 5px;
+	margin: 20px
+}
