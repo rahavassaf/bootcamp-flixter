@@ -1,1 +1,11 @@
-<li><%= section.title %></li>
+<li>
+	<%= section.title %>
+	<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+
+	<ul>
+		<% section.lessons.each do |l| %>
+			<%= render partial: 'instructor/lessons/lesson', locals: {lesson: l} %>
+		<% end %>
+	</ul>
+
+</li>
