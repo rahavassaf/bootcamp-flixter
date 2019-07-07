@@ -31,7 +31,7 @@
 	<hr>
 
 	<ul>
-		<% @course.sections.each do |s| %>
+		<% course.sections.each do |s| %>
 			<%= render partial: 'instructor/sections/section', locals: {section: s} %>
 		<% end %>
 	</ul>
