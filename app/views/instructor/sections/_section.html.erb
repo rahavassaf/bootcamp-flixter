@@ -1,6 +1,8 @@
 <li>
 	<%= section.title %>
-	<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+	<% if current_user && current_user == section.course.user %>
+		<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+	<% end %>
 
 	<ul>
 		<% section.lessons.each do |l| %>
@@ -8,4 +10,5 @@
 		<% end %>
 	</ul>
 
+	&nbsp;
 </li>
