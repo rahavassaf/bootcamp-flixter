@@ -1,7 +1,10 @@
 <br />
 
 <div class="booyah-box col-10 offset-1">
-	<h1><%= current_lesson.title %></h1>
+	<div class="row breadcumbs">
+		<b><%= link_to current_lesson.section.course.title, course_path(current_lesson.section.course) %> \ <%= current_lesson.section.title %> \ </b>
+		<h1><%= current_lesson.title %></h1>
+	</div>
 	<hr>
 	<p>
 		<%= current_lesson.subtitle %>

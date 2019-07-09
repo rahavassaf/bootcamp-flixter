@@ -143,16 +143,35 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .section {
 	background-color: rgba(0, 0, 0, 0.35);
 	box-shadow: 2px 2px 4px $primary-shadow-color;
-	padding: 10px;
-	border: solid 2px #888;
+	padding: 20px;
+	border: solid 2px;
 	border-radius: 5px;
-	margin: 20px
+	margin: 20px;
+	border-color: #999 #666 #666 #999;
 }
 
 .lesson {
-	background-color: rgba(230, 230, 230, 0.35);
-	padding: 10px;
-	border: solid 2px #888;
+	background-color: #000;
+	color: #fff;
+	padding: 20px 10px;
+	border: solid 2px $accent-color;
 	border-radius: 5px;
-	margin: 20px
+	margin-top: 10px;
+	height: 130px;
+	font-size: 15px;
+
+	a {
+		color: #fff;
+		font-family: "Helvetica Neue", Helvetica;
+  		font-weight: 100;
+
+  		b {
+  			font-size: 25px;
+  		}
+	}
+}
+
+.breadcumbs {
+	margin: 20px;
+	vertical-align: top;
 }
