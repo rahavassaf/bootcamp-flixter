@@ -22,6 +22,15 @@
 				&nbsp;
 				<%= link_to 'Administer', instructor_course_path(course), class: 'btn btn-danger' %>
 			<% end %>
+
+			<% if current_user %>
+				&nbsp;
+				<% if current_user.enrolled_in?(course) %>
+					<%= link_to 'Un-Enroll', enrollment_path(Enrollment.where(user_id: current_user.id, course_id: course.id).first), class: 'btn btn-danger', method: :delete %>
+				<% else %>
+					<%= link_to 'Enroll', course_enrollments_path(course), class: 'btn btn-primary', method: :post %>
+				<% end %>
+			<% end %>
 		</div>
 	</div>
 
@@ -50,3 +59,5 @@
 		<% end %>
 	</div>
 </div>
+
+<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>

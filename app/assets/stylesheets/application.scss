@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .booyah-box {
   box-shadow: 10px 10px 8px $primary-shadow-color;
-  background-image: image_url('crossword.png');
+  background-image: image_url('noise_pattern_with_crosslines.png');
   border: 2px solid $primary-color;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 10px;
@@ -141,13 +141,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .section {
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: 2px 2px 4px $primary-shadow-color;
 	padding: 20px;
 	border: solid 2px;
 	border-radius: 5px;
 	margin: 20px;
 	border-color: #999 #666 #666 #999;
+	color: #fff;
 }
 
 .lesson {
