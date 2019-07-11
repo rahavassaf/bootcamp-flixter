@@ -23,8 +23,9 @@
 				<%= link_to 'Administer', instructor_course_path(course), class: 'btn btn-danger' %>
 			<% end %>
 
+			&nbsp;
+
 			<% if signed_in? %>
-				&nbsp;
 				<% if current_user.enrolled_in?(course) %>
 					<%= link_to 'Un-Enroll', enrollment_path(Enrollment.where(user_id: current_user.id, course_id: course.id).first), class: 'btn btn-danger', method: :delete %>
 				<% else %>
@@ -73,5 +74,3 @@
 		<% end %>
 	</div>
 </div>
-
-<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
