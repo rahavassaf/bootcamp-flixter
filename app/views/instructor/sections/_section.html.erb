@@ -1,4 +1,4 @@
-<li>
+<li data-update-url=<%= instructor_section_path(section) %>>
 	<%= section.title %>
 	<% if current_user && current_user == section.course.user %>
 		<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>

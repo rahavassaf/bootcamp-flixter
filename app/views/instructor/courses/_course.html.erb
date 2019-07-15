@@ -31,8 +31,8 @@
 
 	<hr>
 
-	<ul>
-		<% course.sections.each do |s| %>
+	<ul class="sections">
+		<% course.sections.rank(:row_order).each do |s| %>
 			<%= render partial: 'instructor/sections/section', locals: {section: s} %>
 		<% end %>
 	</ul>
