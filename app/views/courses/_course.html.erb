@@ -51,26 +51,28 @@
 
 	<hr>
 
-	<div class="col-12">
-		<% course.sections.rank(:row_order).each do |section| %>
-			<br class="clr" />
+	<% if !defined?(supress_sections) || !supress_sections %>
+		<div class="col-12">
+			<% course.sections.rank(:row_order).each do |section| %>
+				<br class="clr" />
 
-			<div class="section">
-				<h3><%= section.title %></h3>
-				<div class="row">
-					<% section.lessons.rank(:row_order).each do |lesson| %>
-						<div class="col-12 col-sm-6">
-							<div class="lesson text-center">
-								<%= link_to lesson_path(lesson) do %>
-									<b><%= lesson.title %></b>
-									<br>
-									<%= lesson.subtitle %>
-								<% end %>
+				<div class="section">
+					<h3><%= section.title %></h3>
+					<div class="row">
+						<% section.lessons.rank(:row_order).each do |lesson| %>
+							<div class="col-12 col-sm-6">
+								<div class="lesson text-center">
+									<%= link_to lesson_path(lesson) do %>
+										<b><%= lesson.title %></b>
+										<br>
+										<%= lesson.subtitle %>
+									<% end %>
+								</div>
 							</div>
-						</div>
-					<% end %>
+						<% end %>
+					</div>
 				</div>
-			</div>
-		<% end %>
-	</div>
+			<% end %>
+		</div>
+	<% end %>
 </div>

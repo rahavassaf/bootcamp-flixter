@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#index'
 
+  resource :dashboard, only: [:show]
+
   namespace :instructor do
     resources :lessons, only: [:update]
+
   	resources :sections, only: [:update] do
   		resources :lessons, only: [:new, :create]
   	end
@@ -20,5 +23,6 @@ Rails.application.routes.draw do
   end
 
   resources :enrollments, only: [:destroy]
+  
   resources :lessons, only: [:show]
 end

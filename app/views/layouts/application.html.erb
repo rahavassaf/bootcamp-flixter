@@ -27,8 +27,11 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
             <div class="dropdown-menu">
               <% if signed_in? %>
+                
+                <%= link_to 'My Dashboard', dashboard_path, class: "dropdown-item" %>
+                
                 <%= link_to edit_user_registration_path(id: current_user.id), class: "dropdown-item" do %>
-                  My Profile
+                  My Registration
                 <% end %>
                 
                 <div class="dropdown-divider"></div>
