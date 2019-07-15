@@ -5,7 +5,7 @@
 	<% end %>
 
 	<ul>
-		<% section.lessons.each do |l| %>
+		<% section.lessons.rank(:row_order).each do |l| %>
 			<%= render partial: 'instructor/lessons/lesson', locals: {lesson: l} %>
 		<% end %>
 	</ul>
