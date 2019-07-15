@@ -1,7 +1,17 @@
-<li data-update-url=<%= instructor_lesson_path(lesson) %>>
-	<b><%= lesson.title %></b>
+<li data-update-url="<%= instructor_lesson_path(lesson) %>">
+	<div class="row">
+		<div class="col-1">
+			<span class="fa fa-ellipsis-v"></span>
+		</div>
 
-	-
-
-	<%= lesson.subtitle %>
+		<div class="col-11 text-center">
+			<p>
+				<b><%= lesson.title %></b>
+			</p>
+			<hr style="color: #666; border-top: solid 1px;">
+			<p>
+				<%= lesson.subtitle %>
+			</p>
+		</div>
+	</div>
 </li>

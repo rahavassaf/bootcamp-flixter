@@ -30,7 +30,8 @@ $theme-colors: (
 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 body {
@@ -143,7 +144,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .section {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	box-shadow: 2px 2px 4px $primary-shadow-color;
 	padding: 20px;
 	border: solid 2px;
@@ -177,4 +178,48 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .breadcumbs {
 	margin: 20px;
 	vertical-align: top;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-li {
+  color: #fff;
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px $primary-shadow-color;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+ul .header {
+  font-size: 25px;
+
+  .fa {
+  	font-size: 20px;
+  }
+}
+
+.lessons li {
+  background: black;
+  color: #fff;
+  margin: 10px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: solid 2px $accent-color;
+
+  b {
+  	font-size: 25px;
+  	font-weight: 100;
+  }
+
+  p {
+  	margin: 0px;
+  }
 }
