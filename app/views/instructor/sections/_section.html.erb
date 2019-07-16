@@ -5,7 +5,10 @@
 		<%= section.title %>
 	</div>
 
-	<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-primary btn-sm' %>
+	<button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#new-lesson" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+  		Add Lesson
+	</button>
+
 	<br class="clr" />
 	<br class="clr" />
 	

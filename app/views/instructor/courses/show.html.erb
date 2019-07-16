@@ -21,6 +21,12 @@
             });
         }
     });
+
+
+    $('.new-lesson-button').click(function( event ) {
+      $('#newLessonForm').attr('action', $(event.target).data('lesson-url'));
+    });
+
   });
 </script>
 
