@@ -4,6 +4,12 @@
 	<div class="row breadcumbs">
 		<b><%= link_to current_lesson.section.course.title, course_path(current_lesson.section.course) %> \ <%= current_lesson.section.title %> \ </b>
 		<h1><%= current_lesson.title %></h1>
+
+		<% if current_lesson.next_lesson.present? %>
+    		<%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default float-right' do %>
+    			Next Lesson &nbsp;<span class="fa fa-forward"></span>
+    		<% end %>
+  		<% end %>
 	</div>
 	<hr>
 	<p>
