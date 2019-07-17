@@ -90,11 +90,12 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .frosty {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.6);
 	color: $accent-color;
 	border-radius: 5px;
-	padding: 5px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
 	box-shadow: 10px 10px 8px $dark-shadow-color;
+	margin: 20px;
 
 	h1 {
 		font-weight: 100;
@@ -222,4 +223,10 @@ ul .header {
   p {
   	margin: 0px;
   }
+}
+
+.round-image {
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px $primary-shadow-color;
+	margin:20px;
 }

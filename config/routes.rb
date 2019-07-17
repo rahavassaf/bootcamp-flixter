@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#index'
+  get 'privacy', to: 'static_pages#privacy'
+  get 'careers', to: 'static_pages#careers'
+  get 'team', to: 'static_pages#team'
 
   resource :dashboard, only: [:show]
 
